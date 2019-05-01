@@ -45,7 +45,26 @@ logo.setAttribute('src', siteContent["nav"]["img-src"]);
 let navItems = document.querySelectorAll("nav a");
 for (var i = 0; i < navItems.length; i++){
   navItems[i].innerText = siteContent["nav"][`nav-item-${i+1}`];
-}
+};
+
+// Change Nav BG color
+let headerElement = document.querySelector("header");
+headerElement.style.backgroundColor = "green";
+
+// Add 2 new items
+let navElement = document.querySelector("nav");
+
+//---- Home nav item
+let newNavHome = document.createElement("a");
+newNavHome.setAttribute("href","#");
+newNavHome.innerHTML = "Home";
+navElement.prepend(newNavHome);
+
+//---- Support nav item
+let newNavSupport = document.createElement("a");
+newNavSupport.setAttribute("href","#");
+newNavSupport.innerHTML = "Support";
+navElement.appendChild(newNavSupport);
 
 // Top CTA section
 
