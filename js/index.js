@@ -116,3 +116,58 @@ contactContent[2].textContent = siteContent["contact"]["email"];
 // Footer Copyright
 let copyright = document.querySelector("footer p");
 copyright.innerHTML = siteContent["footer"]["copyright"];
+
+// STRETCH STUFF - comment out to see MVP
+
+// Change style
+let slowMode = false;
+let theBody = document.getElementsByTagName('body');
+theBody[0].style.backgroundColor = 'black';
+theBody[0].style.color = 'slategrey';
+
+ctaButton.innerHTML = 'Click me!';
+
+headerElement.style.backgroundColor = 'slategrey';
+
+headerNav = document.querySelector('header nav');
+headerNav.style.justifyContent = 'space-around';
+
+let mainContainer = document.querySelector('.container');
+mainContainer.style.width = '98%';
+
+let newButton = document.createElement('button');
+newButton.innerHTML = "56k Mode";
+
+let ctaText = document.querySelector('.cta-text');
+
+ctaButton.addEventListener('click', (event) => {
+  ctaText.append(newButton);
+});
+
+const toggleSlowMode = function() {
+  
+}
+
+newButton.addEventListener('click',(event) => {
+  let allImages;
+  if (!slowMode) {
+      allImages = document.getElementsByTagName('img');
+      allImages = Array.from(allImages);
+      allImages.forEach(function(image){
+      image.style.display = 'none';
+      slowMode = true;
+    });
+  } else {
+      allImages = document.getElementsByTagName('img');
+      allImages = Array.from(allImages);
+      allImages.forEach(function(image){
+      image.style.display = 'initial';
+      slowMode = false;
+    });
+  };
+  
+});
+
+
+
+
