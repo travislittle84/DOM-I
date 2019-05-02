@@ -145,10 +145,6 @@ ctaButton.addEventListener('click', (event) => {
 });
 
 const toggleSlowMode = function() {
-  
-}
-
-newButton.addEventListener('click',(event) => {
   let allImages;
   if (!slowMode) {
       allImages = document.getElementsByTagName('img');
@@ -165,7 +161,10 @@ newButton.addEventListener('click',(event) => {
       slowMode = false;
     });
   };
-  
+}
+
+newButton.addEventListener('click',(event) => {
+  toggleSlowMode();  
 });
 
 
